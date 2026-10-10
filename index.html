@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage - Cafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* BACKGROUND MENARIK UNTUK SELURUH HALAMAN */
+            background: #fdf6e3;
+            background-image: 
+                radial-gradient(at 20% 30%, #ffecd2 0%, transparent 50%),
+                radial-gradient(at 80% 80%, #fcb69f 0%, transparent 50%),
+                url('https://www.transparenttextures.com/patterns/cubes.png');
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 900px;
+            max-width: 95%;
+            margin: 20px auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* HEADER */
+        .header {
+            background: white;
+            text-align: center;
+            padding: 20px 0 10px;
+        }
+        .logo img { width: 90px; border-radius: 50%; }
+        
+        .menu ul { list-style: none; padding: 15px 0; }
+        .menu ul li { display: inline-block; position: relative; }
+        .menu ul li a {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            display: block;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+        .menu ul li a:hover { background: #ffecd2; }
+
+        ul.submenu {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: left;
+            position: absolute;
+            top: 45px;
+            left: 0;
+            display: none;
+            min-width: 150px;
+            z-index: 10;
+            overflow: hidden;
+        }
+        ul.submenu li { display: block; }
+        ul.submenu li a { border-radius: 0; }
+        .menu ul li:hover ul.submenu { display: block; }
+
+        /* JUMBOTRON - BACKGROUND CAFE JEPANG */
+        .jumbotron {
+            font-family: 'Raleway', sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            padding: 90px 40px;
+            text-align: center;
+            color: white;
+        }
+        .overlay {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+        }
+        .jumbotron h2, .jumbotron p { position: relative; z-index: 2; }
+        .jumbotron h2 { font-size: 38px; margin-bottom: 15px; letter-spacing: 1px; }
+        .jumbotron p { font-family: 'Poppins', sans-serif; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+        /* CONTENT*/
+        .content {
+            background: #fffaf0;
+            padding: 30px 20px;
+            overflow: auto;
+        }
+        .content h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #5d4037;
+        }
+        .menu-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .thumbnail {
+            background: white;
+            text-align: center;
+            padding: 12px;
+            width: 250px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .thumbnail:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+        }
+        .thumbnail img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .thumbnail h2 { font-size: 18px; margin: 12px 0 5px; color: #3e2723; }
+        .thumbnail p { color: #e65100; font-weight: 600; }
+
+        .footer {
+            background: #3e2723;
+            color: #ffccbc;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="logo">
+            <img src="https://img.freepik.com/premium-vector/elegant-restaurant-menu-logo-design-refined-vector-graphics_579306-24295.jpg?w=2000" alt="Logo Cafe">
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li>
+                    <a href="#">About ▼</a>
+                    <ul class="submenu">
+                        <li><a href="#">CV</a></li>
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Portofolio</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="jumbotron">
+        <div class="overlay"></div>
+        <h2>Welcome to My Cafe PRINCE VAN</h2>
+        <p>Selamat datang di kedai kami, surganya makanan lezat dengan cita rasa yang bikin nagih! Kami hadir untuk menemani waktu lapar kalian dengan hidangan yang menggugah selera, harga bersahabat, dan rasa yang bikin ingin pesan lagi.</p>
+    </div>
+
+    <div class="content">
+        <h1>Menu Makanan Favorit</h1>
+        <div class="menu-list">
+            <div class="thumbnail">
+                <img src="https://pelayananpublik.id/wp-content/uploads/2023/09/Screenshot_20230926-2359472.png" alt="Seblak">
+                <h2>Seblak</h2>
+                <p>Rp 15.000</p>
+            </div>
+            <div class="thumbnail">
+                <img src="mie-ayam.jpg">
+                <h2>Mie Ayam</h2>
+                <p>Rp 35.000</p>
+            </div>
+            <div class="thumbnail">
+                <img src="baso.jpg">
+                <h2>Bakso</h2>
+                <p>Rp 15.000</p>
+            </div>
+            <div class="thumbnail">
+                <img src="seefood tumpah.webp">
+                <h2>Seafood Tumpah</h2>
+                <p>Rp 60.000</p>
+            </div>
+            <div class="thumbnail">
+                <img src="dimsum mentai.jpeg">
+                <h2>Dimsum Mentai</h2>
+                <p>Rp 30.000</p>
+            </div>
+            <div class="thumbnail">
+                <img src="cireng creamy.jpg">
+                <h2>Cireng Creamy</h2>
+                <p>Rp 8.500</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2018 My Cafe Page | Dibuat dengan ❤️ di Bogor</p>
+    </div>
+</div>
+
+</body>
+</html>
